@@ -1,6 +1,7 @@
 import QtQuick
 import "3_BasicElements"
 import "4_CustomComponentsAndModules"
+import GreatButtons
 
 Window {
     width: 640
@@ -9,23 +10,31 @@ Window {
     title: qsTr("QT Practice")
 
     Column{
-
-
-        MButton{
-            id: buttonId1
+        x: 10
+        y: 10
+        RedButton{
             buttonText: "Button1"
-            onButtonClicked: {
-                console.log("Clicked Button1")
+            onButtonClicked:{
+                console.log("Clicked on component button1")
             }
         }
-
-        MButton{
-            id: buttonId2
-            buttonText: "Button2"
-            onButtonClicked: {
-                console.log("Clicked Button2")
+        GreenButton{
+            buttonText: "Button1"
+            onButtonClicked:{
+                console.log("Clicked on component button1")
             }
         }
-
+        GrayButton{
+            buttonText: "Button1"
+            onButtonClicked:{
+                console.log("Clicked on component button1")
+            }
+        }
+        BlueButton{
+            buttonText: "Button1"
+            onButtonClicked:{
+                console.log("Clicked on component button1")
+            }
+        }
     }
 }

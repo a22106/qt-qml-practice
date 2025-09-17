@@ -41,6 +41,8 @@ qt_add_qml_module(appQtPractice
 
 )
 
+add_subdirectory(custom_buttons)
+
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
 # explicit, fixed bundle identifier manually though.
@@ -53,7 +55,7 @@ set_target_properties(appQtPractice PROPERTIES
 )
 
 target_link_libraries(appQtPractice
-    PRIVATE Qt6::Quick
+    PRIVATE Qt6::Quick GreatButtonsLibplugin
 )
 
 include(GNUInstallDirs)

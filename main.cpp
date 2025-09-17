@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
         &app,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
+    engine.addImportPath(":/"); // Remember to add this QML import path
     engine.loadFromModule("QtPractice", "Main");
 
     return app.exec();
