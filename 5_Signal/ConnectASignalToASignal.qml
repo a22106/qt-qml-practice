@@ -1,13 +1,8 @@
 import QtQuick
-import "3_BasicElements"
-import "4_CustomComponentsAndModules"
-import "5_Signal"
-import "5_Signal/Usecase"
 
-Window{
-    width: 640
-    height: 480
-    visible: true
+Item {
+    width: 400
+    height: 400
 
     Rectangle{
         id: rectId
@@ -27,17 +22,18 @@ Window{
         MouseArea{
             anchors.fill: parent
             onClicked: {
-                console.log("Clicked")
                 rectId.greet("hello!")
             }
         }
+    }
 
+    Component.onCompleted: {
+        // Connect signal to signal
+        rectId.greet.connect(rectId.forward_greeting)
 
-        Component.onCompleted: {
-            // Connect signal to signal
-            rectId.greet.connect(rectId.forward_greeting)
-
-            rectId.forward_greeting(rectId.respond_your_way)
-        }
+        rectId.forward_greeting.connect(rectId.respond_your_way)
     }
 }
+
+
+

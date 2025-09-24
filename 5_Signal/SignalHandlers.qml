@@ -35,9 +35,12 @@ Window{
             onReleased: mouse => {
                             console.log("Released at " + mouse.x + ", y:" + mouse.y)
                         }
-            onPressed: mouse => {
-                           console.log(`Pressed at ${mouse.x}, y: ${mouse.y}`)
-                       }
+            onPressAndHold: mouse => {
+                                console.log("Was held: " + mouse.wasHeld )
+                            }
+            onPositionChanged: mouse => {
+                                   console.log("Mouse at: " + mouse.x + ", y: " + mouse.y)
+                               }
         }
     }
 }
