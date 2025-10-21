@@ -87,6 +87,8 @@ qt_add_qml_module(appQtPractice
         QML_FILES 9_QtQuickControls/3_BusyIndicator.qml
         QML_FILES 9_QtQuickControls/4_checkbox.qml
         SOURCES cppworker.h cppworker.cpp
+        RESOURCES
+        RESOURCES .gitignore
 
 )
 

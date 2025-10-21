@@ -1,9 +1,5 @@
 import QtQuick
 import QtQuick.Controls
-import "3_BasicElements"
-import "4_CustomComponentsAndModules"
-import "5_Signal"
-import "5_Signal/Usecase"
 
 Window {
     width: 640
@@ -72,12 +68,16 @@ Window {
                 text: qsTr("Call C++ method")
                 onClicked: {
                     if (nameFieldId.text !== null && ageFieldId.text !== null) {
-                        returnTextId.text = BWorker.regularMethodWithReturn(nameFieldId.text, parseInt(ageFieldId.text));
+                        var response = BWorker.regularMethodWithReturn(nameFieldId.text, parseInt(ageFieldId.text));
+                        returnTextId.text = response;
                     } else {
                         console.log("One of the two required fields is empty");
                     }
                 }
             }
         }
+    }
+    Other{
+
     }
 }

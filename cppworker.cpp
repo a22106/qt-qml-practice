@@ -12,6 +12,6 @@ QString CppWorker::regularMethodWithReturn(QString name, int age){
     return QString(name + ":" + QString::number(age) + " years old");
 }
 
-void CppWorker::cppSlot(){
+void CppWorker::cppSlot() {
     qDebug() << "This is C++ talking, cppSlot called.";
 }

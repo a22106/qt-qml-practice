@@ -3,18 +3,18 @@
 
 #include <QObject>
 
-class CppWorker: public QObject
+class CppWorker final : public QObject
 {
     Q_OBJECT
 public:
     explicit CppWorker(QObject *parent = nullptr);
 
     // Q_INVOKABLE
-    Q_INVOKABLE void regularMethod();
-    Q_INVOKABLE QString regularMethodWithReturn(QString name, int age);
+    Q_INVOKABLE static void regularMethod();
+    Q_INVOKABLE static QString regularMethodWithReturn(QString name, int age);
 
 public slots:
-    void cppSlot();
-}
+    static void cppSlot();
+};
 
 #endif // CPPWORKER_H
