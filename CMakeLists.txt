@@ -25,70 +25,68 @@ qt_add_qml_module(appQtPractice
     VERSION 1.0
     QML_FILES
         Main.qml
-        QML_FILES 2_DissectingQmlSyntax/dataTypes.qml
-        QML_FILES 2_DissectingQmlSyntax/PropertyBindings.qml
-        QML_FILES 2_DissectingQmlSyntax/QtGlobalObject.qml
-        QML_FILES 2_DissectingQmlSyntax/PropertyChangeHandlers.qml
-        QML_FILES 3_BasicElements/Rectangles.qml
-        QML_FILES 3_BasicElements/Images.qml
-        QML_FILES 4_CustomComponentsAndModules/custom_components.qml
-        QML_FILES Basic.qml
+        Basic.qml
+        2_DissectingQmlSyntax/dataTypes.qml
+        2_DissectingQmlSyntax/PropertyBindings.qml
+        2_DissectingQmlSyntax/QtGlobalObject.qml
+        2_DissectingQmlSyntax/PropertyChangeHandlers.qml
+        3_BasicElements/Rectangles.qml
+        3_BasicElements/Images.qml
+        4_CustomComponentsAndModules/custom_components.qml
+        4_CustomComponentsAndModules/MButton.qml
+        4_CustomComponentsAndModules/custom_component_in_path.qml
+        5_Signal/SignalHandlers.qml
+        4_CustomComponentsAndModules/LoadButtonsFromModule.qml
+        5_Signal/SignalParameters.qml
+        5_Signal/PropertyChangeSignal.qml
+        5_Signal/Connections.qml
+        5_Signal/AttachedSignalHandlers.qml
+        5_Signal/CustomSignals.qml
+        5_Signal/ConnectSignaltoMethod.qml
+        5_Signal/Usecase/ColorPicker.qml
+        5_Signal/Usecase/DisplayArea.qml
+        5_Signal/Usecase/UseMain.qml
+        5_Signal/ConnectASignalToASignal.qml
+        5_Signal/SendSignalsAccrossComponents.qml
+        5_Signal/SendSignalsAccrossComponents/Notifier.qml
+        5_Signal/SendSignalsAccrossComponents/Receiver.qml
+        6_UserInput/1_TextInput.qml
+        6_UserInput/2_BetterTextInput.qml
+        6_UserInput/LabeledTextInput.qml
+        6_UserInput/3_TextEdit.qml
+        6_UserInput/4_MouseArea.qml
+        6_UserInput/5_KeysAttachedProperty.qml
+        6_UserInput/6_KeyNavigation.qml
+        6_UserInput/7_FocusScope.qml
+        6_UserInput/CustomElement.qml
+        7_Javascript/2_JsUsage.qml
+        7_Javascript/3_FunctionsAndScope.qml
+        7_Javascript/4_JsDirectImport.qml
+        7_Javascript/greeting.js
+        7_Javascript/5_JsIndirectImport.qml
+        7_Javascript/utilities1.js
+        7_Javascript/utilities2.js
+        7_Javascript/6_QtInclude.qml
+        7_Javascript/6_util1.js
+        7_Javascript/6_util2.js
+        7_Javascript/7_JsModules.qml
+        7_Javascript/7_util1.mjs
+        7_Javascript/7_util2.mjs
+        8_Positioning/2_Anchors.qml
+        8_Positioning/3_AnchorMarginAndOffset.qml
+        8_Positioning/4_AnchorParentSibiling.qml
+        8_Positioning/5_Positioners.qml
+        8_Positioning/6_Layouts.qml
+        8_Positioning/7_Flow.qml
+        9_QtQuickControls/2_Button.qml
+        9_QtQuickControls/3_BusyIndicator.qml
+        9_QtQuickControls/4_checkbox.qml
     RESOURCES
         resources/Images/image.jpg
-        RESOURCES howCleaver.qrc
-        QML_FILES 4_CustomComponentsAndModules/MButton.qml
-        QML_FILES 4_CustomComponentsAndModules/custom_component_in_path.qml
-        QML_FILES 5_Signal/SignalHandlers.qml
-        QML_FILES 4_CustomComponentsAndModules/LoadButtonsFromModule.qml
-        QML_FILES 5_Signal/SignalParameters.qml
-        QML_FILES 5_Signal/PropertyChangeSignal.qml
-        QML_FILES 5_Signal/Connections.qml
-        QML_FILES 5_Signal/AttachedSignalHandlers.qml
-        QML_FILES 5_Signal/CustomSignals.qml
-        QML_FILES 5_Signal/ConnectSignaltoMethod.qml
-        QML_FILES
-        QML_FILES 5_Signal/Usecase/ColorPicker.qml
-        QML_FILES 5_Signal/Usecase/DisplayArea.qml
-        QML_FILES 5_Signal/Usecase/UseMain.qml
-        QML_FILES 5_Signal/ConnectASignalToASignal.qml
-        QML_FILES 5_Signal/SendSignalsAccrossComponents.qml
-        QML_FILES 5_Signal/SendSignalsAccrossComponents/Notifier.qml
-        QML_FILES 5_Signal/SendSignalsAccrossComponents/Receiver.qml
-        QML_FILES 6_UserInput/1_TextInput.qml
-        QML_FILES 6_UserInput/2_BetterTextInput.qml
-        QML_FILES 6_UserInput/LabeledTextInput.qml
-        QML_FILES 6_UserInput/3_TextEdit.qml
-        QML_FILES 6_UserInput/4_MouseArea.qml
-        QML_FILES 6_UserInput/5_KeysAttachedProperty.qml
-        QML_FILES 6_UserInput/6_KeyNavigation.qml
-        QML_FILES 6_UserInput/7_FocusScope.qml
-        QML_FILES 6_UserInput/CustomElement.qml
-        QML_FILES 7_Javascript/2_JsUsage.qml
-        QML_FILES 7_Javascript/3_FunctionsAndScope.qml
-        QML_FILES 7_Javascript/4_JsDirectImport.qml
-        QML_FILES 7_Javascript/greeting.js
-        QML_FILES 7_Javascript/5_JsIndirectImport.qml
-        QML_FILES 7_Javascript/utilities1.js
-        QML_FILES 7_Javascript/utilities2.js
-        QML_FILES 7_Javascript/6_QtInclude.qml
-        QML_FILES 7_Javascript/6_util1.js
-        QML_FILES 7_Javascript/6_util2.js
-        QML_FILES 7_Javascript/7_JsModules.qml
-        QML_FILES 7_Javascript/7_util1.mjs
-        QML_FILES 7_Javascript/7_util2.mjs
-        QML_FILES
-        QML_FILES 8_Positioning/2_Anchors.qml
-        QML_FILES 8_Positioning/3_AnchorMarginAndOffset.qml
-        QML_FILES 8_Positioning/4_AnchorParentSibiling.qml
-        QML_FILES 8_Positioning/5_Positioners.qml
-        QML_FILES 8_Positioning/6_Layouts.qml
-        QML_FILES 8_Positioning/7_Flow.qml
-        QML_FILES 9_QtQuickControls/2_Button.qml
-        QML_FILES 9_QtQuickControls/3_BusyIndicator.qml
-        QML_FILES 9_QtQuickControls/4_checkbox.qml
-        SOURCES cppworker.h cppworker.cpp
-        RESOURCES
-        RESOURCES .gitignore
+        howCleaver.qrc
+    SOURCES
+        cppworker.h
+        cppworker.cpp
 
 )
 

@@ -2,39 +2,39 @@ import QtQuick
 
 Window {
     width: 640
-    height: 480
+    height: 200
     visible: true
     title: qsTr("TextInput")
 
-    Row{
+    Row {
         x: 10
         y: 10
         spacing: 20
 
-        Rectangle{
+        Rectangle {
             id: firstNameRectId
-            width: firstNameLabelId.implicitWidth + 20
-            height: firstNameLabelId.implicitHeight + 20
-            color: "dodgerblue"
+            width: firstNameLableId.implicitWidth + 10
+            height: firstNameLableId.implicitHeight + 10
+            color: "beige"
 
-            Text{
-                id: firstNameLabelId
+            Text {
+                id: firstNameLableId
                 anchors.centerIn: parent
-                text: "First name: "
+                text: "First name: " + firstInputLableId.text
             }
         }
 
-        Rectangle{
-            id: firstNameTextRectId
-            width: firstNameTextId.implicitWidth + 20
-            height: firstNameTextId.implicitHeight + 20
-            color: "dodgerblue"
+        Rectangle {
+            id: firstInputRectId
+            width: firstInputLableId.implicitWidth + 10
+            height: firstInputLableId.implicitHeight + 10
+            color: "beige"
 
-            TextInput{
-                id: firstNameTextId
+            TextInput {
+                id: firstInputLableId
                 anchors.centerIn: parent
+                text: "Pius"
                 focus: true
-                text: "Type in your first name"
                 onEditingFinished: {
                     console.log("The first name changed to: " + text)
                 }
@@ -42,37 +42,37 @@ Window {
         }
     }
 
-    Row{
+    Row {
         x: 10
-        y: 60
+        y: firstNameRectId.height + 10
         spacing: 20
 
-        Rectangle{
-            id: lastNameRectId
-            width: lastNameLabelId.implicitWidth + 20
-            height: lastNameLabelId.implicitHeight + 20
-            color: "dodgerblue"
+        Rectangle {
+            id: secondNameRectId
+            width: secondNameLableId.implicitWidth + 10
+            height: secondNameLableId.implicitHeight + 10
+            color: "beige"
 
-            Text{
-                id: lastNameLabelId
+            Text {
+                id: secondNameLableId
                 anchors.centerIn: parent
-                text: "Last name: "
+                text: "Second name"
             }
         }
 
-        Rectangle{
-            id: lastNameTextRectId
-            width: lastNameTextId.implicitWidth + 20
-            height: lastNameTextId.implicitHeight + 20
-            color: "dodgerblue"
+        Rectangle {
+            id: secondInputRectId
+            width: secondInputLableId.implicitWidth + 10
+            height: secondInputLableId.implicitHeight + 10
+            color: "beige"
 
-            TextInput{
-                id: lastNameTextId
+            TextInput {
+                id: secondInputLableId
                 anchors.centerIn: parent
                 focus: true
-                text: "Type in your last name"
+                text: "Type in your second name"
                 onEditingFinished: {
-                    console.log("The last name changed to: " + text)
+                    console.log("The second name changed to: " + text)
                 }
             }
         }
